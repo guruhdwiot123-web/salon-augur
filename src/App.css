@@ -1,0 +1,127 @@
+/* --- 1. RESET & FONT MODERN --- */
+:root {
+  --primary: #4f46e5; /* Ungu Modern */
+  --secondary: #ec4899; /* Pink Salon */
+  --bg-color: #f3f4f6;
+  --glass: rgba(255, 255, 255, 0.9);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Font baru kita */
+  background-color: var(--bg-color);
+  color: #1f2937;
+}
+
+/* --- 2. LAYOUT UTAMA --- */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- 3. SIDEBAR YANG ELEGAN --- */
+.sidebar {
+  width: 260px;
+  background: #1e1b4b; /* Biru Malam */
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  color: var(--secondary); /* Aksen Pink */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px); /* Efek geser dikit */
+}
+
+/* --- 4. AREA KONTEN UTAMA --- */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #111827;
+}
+
+/* --- 5. KARTU-KARTU (Card) --- */
+.card {
+  background: var(--glass);
+  padding: 25px;
+  border-radius: 16px; /* Sudut membulat */
+  box-shadow: var(--shadow);
+  border: 1px solid white;
+}
+
+/* --- 6. FORMULIR INPUT --- */
+input {
+  padding: 12px 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+button {
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.95); /* Efek 'membal' saat diklik */
+}
+
+/* --- 7. GRID KARTU PELANGGAN --- */
+.booking-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsif otomatis */
+  gap: 20px;
+}
+
+.booking-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border-left: none !important; /* Kita ganti style border lama */
+  border-top: 4px solid var(--primary); /* Ganti jadi garis atas */
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px); /* Kartu naik saat ditunjuk mouse */
+}

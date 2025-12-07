@@ -79,7 +79,7 @@ function App()  {
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: '#2c3e50' }}>
             <div className="card" style={{ width: '300px', textAlign: 'center', padding: '30px' }}>
                 <h2>🔐 Salon Gate</h2>
-                <p>{isRegisterMode ? "Daftarkan Akun Baru" : "Silakan Masuk, Bos!"}</p>
+                <p>{isRegisterMode ? "Daftarkan Akun Baru" : "Silakan Masuk"}</p>
                 
                 <form onSubmit={handleAuth} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
                     <input 
